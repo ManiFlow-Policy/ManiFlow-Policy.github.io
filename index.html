@@ -594,46 +594,6 @@
                 </div>
             </div>
         </div>
-        
-        <h2>ManiFlow vs. π<sub>0</sub></h2>
-        <!-- ManiFlow vs. π<sub>0</sub> -->
-        <div class="task-row">
-            <!-- <div class="task-label">ManiFlow vs. π<sub>0</sub></div> -->
-            <div class="video-slider-container">
-                <div class="slider-nav left">
-                    <i class="fa fa-chevron-left"></i>
-                </div>
-                <div class="video-slider">
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_y4_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 1</div>
-                    </div>
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_w2_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 2</div>
-                    </div>
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_y6_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 3</div>
-                    </div>
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_w1_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 4</div>
-                    </div>
-                </div>
-                <div class="slider-nav right">
-                    <i class="fa fa-chevron-right"></i>
-                </div>
-            </div>
-        </div>
 
     </div>
 
@@ -642,47 +602,91 @@
         ManiFlow demonstrates robustness to viewpoint changes, as shown in the following examples.
     </p>
 
-    <div class=".policy-robust-section">
-        <h2>ManiFlow vs. π<sub>0</sub></h2>
-        <!-- ManiFlow vs. π<sub>0</sub> -->
-        <div class="task-row">
-            <!-- <div class="task-label">ManiFlow vs. π<sub>0</sub></div> -->
-            <div class="video-slider-container">
-                <div class="slider-nav left">
-                    <i class="fa fa-chevron-left"></i>
-                </div>
-                <div class="video-slider">
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_y4_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 1</div>
-                    </div>
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_w2_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 2</div>
-                    </div>
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_y6_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 3</div>
-                    </div>
-                    <div class="video-item">
-                        <video autoplay muted playsinline loop>
-                            <source src="videos/teaser/h1_grasp_w1_s_4x.mp4" type="video/mp4">
-                        </video>
-                        <div class="overlay">Scene 4</div>
-                    </div>
-                </div>
-                <div class="slider-nav right">
-                    <i class="fa fa-chevron-right"></i>
-                </div>
+
+    <h2>ManiFlow vs. π<sub>0</sub></h2>
+    <p>
+    We evaluated several new objects. While Diffusion Policy, due to the use of Color Jitter augmentation, can occasionally handle some unseen objects, it does so with a very low success rate.
+    In contrast, iDP3 naturally handles a wide range of objects, thanks to its use of 3D representations.
+    </p>
+    <div id="video_grid_gen" style="padding-top: 1vw; padding-bottom: 2vw">
+        <div class="row_label">π<sub>0</sub></div>
+        <!-- 1 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_failure">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode0_pi0.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>Training Object & New Object</div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_failure">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode1_pi0.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>New Object</div>
+            </div>
+        </div>
+
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_failure">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode2_pi0.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>New Object</div>
+            </div>
+        </div>
+
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_failure">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode3_pi0.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>New Object</div>
+            </div>
+        </div>
+    
+
+        <div class="row_label">ManiFlow</div>
+        <!-- 5 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_success">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode0_maniflow.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>Training Object & New Object</div>
+            </div>
+        </div>
+        <!-- 7 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_success">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode1_maniflow.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>New Object</div>
+            </div>
+        </div>
+
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_success">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode2_maniflow.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>New Object</div>
+            </div>
+        </div>
+
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border_success">
+                <video autoplay muted playsinline loop playsinline>
+                    <source src="videos/sim/lift_pot/episode3_maniflow.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">Training Scene<br>New Object</div>
             </div>
         </div>
     </div>
+
 
     <hr class="rounded">
 
@@ -728,6 +732,16 @@
     </p>
     <br>
 </div>
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    // 只对video_grid_gen容器内的视频设置2倍速
+    document.querySelectorAll('#video_grid_gen video').forEach(video => {
+        video.playbackRate = 4.0;
+    });
+});
+</script>
+
 </body>
 <script src="assets/js/slider.js"></script>
 </html>
