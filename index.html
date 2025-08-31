@@ -167,7 +167,7 @@
      <!-- <div class="overlay"></div> -->
     <div class="content" style="padding: 0 0vh">
         <h1> ManiFlow: A General Robot Manipulation Policy via Consistency Flow Training </h1>
-        <p> ManiFlow performs diverse dexterous skills on humanoid and bimanual setups, generalizing to unseen objects and backgrounds.
+        <p> ManiFlow performs diverse dexterous skills on humanoid and bimanual robot systems, generalizing to unseen objects and backgrounds.
             All skills in videos are autonomous in 4x speed.</p>
     </div>
 
@@ -637,10 +637,52 @@
 
     </div>
 
-    <h1 id="robustness">Robustness</h1>
+    <h1 id="robustness">Policy Robustness</h1>
     <p>
         ManiFlow demonstrates robustness to viewpoint changes, as shown in the following examples.
     </p>
+
+    <div class=".policy-robust-section">
+        <h2>ManiFlow vs. π<sub>0</sub></h2>
+        <!-- ManiFlow vs. π<sub>0</sub> -->
+        <div class="task-row">
+            <!-- <div class="task-label">ManiFlow vs. π<sub>0</sub></div> -->
+            <div class="video-slider-container">
+                <div class="slider-nav left">
+                    <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="video-slider">
+                    <div class="video-item">
+                        <video autoplay muted playsinline loop>
+                            <source src="videos/teaser/h1_grasp_y4_s_4x.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay">Scene 1</div>
+                    </div>
+                    <div class="video-item">
+                        <video autoplay muted playsinline loop>
+                            <source src="videos/teaser/h1_grasp_w2_s_4x.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay">Scene 2</div>
+                    </div>
+                    <div class="video-item">
+                        <video autoplay muted playsinline loop>
+                            <source src="videos/teaser/h1_grasp_y6_s_4x.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay">Scene 3</div>
+                    </div>
+                    <div class="video-item">
+                        <video autoplay muted playsinline loop>
+                            <source src="videos/teaser/h1_grasp_w1_s_4x.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay">Scene 4</div>
+                    </div>
+                </div>
+                <div class="slider-nav right">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <hr class="rounded">
 

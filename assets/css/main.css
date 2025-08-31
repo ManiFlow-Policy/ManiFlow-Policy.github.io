@@ -1563,6 +1563,24 @@ a:hover {
     text-align: center;
 }
 
+/* Policy Robustness Section Styles */
+.policy-robust-section {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2vw 0;
+    position: relative;
+}
+
+.policy-robust-section h2 {
+    color: #2E2D29;
+    font-family: "Source Serif 4", serif;
+    font-weight: normal;
+    font-size: 1.5vw;
+    margin-bottom: 1.5vw;
+    text-align: center;
+}
+
 .task-row {
     display: flex;
     flex-direction: column;
