@@ -1627,6 +1627,20 @@ a:hover {
     font-weight: bold;
 }
 
+.task-label-sim {
+    width: 100%; /* 占满整个flex容器 */
+    text-align: center;
+    color: #2E2D29;
+    font-family: "Source Serif 4", serif;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    font-weight: bold;
+    /* 使用padding来模拟视频区域的对齐 */
+    padding-left: calc(11% + 10px); /* row_label宽度 + gap */
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
