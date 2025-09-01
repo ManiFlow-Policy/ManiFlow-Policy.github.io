@@ -338,7 +338,7 @@ column_label {
     text-align: center;
     padding-right: 0.8vw;
     padding-left: 0.8vw;
-    color: #2E2D29;
+    color: #be7021; /* Author name color #2E2D29, 718096, 744210, a25c17 */
 }
 
 .contribution {

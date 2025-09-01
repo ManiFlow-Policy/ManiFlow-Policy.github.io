@@ -97,7 +97,7 @@
             </div>
         </div>
         <div class="video_large_2 video_container">
-            <video src="videos/teaser/h1_grasp_w2_4x.mp4" autoplay muted loop playsinline></video>
+            <video src="videos/teaser/h1_grasp_w3_4x.mp4" autoplay muted loop playsinline></video>
         </div>
     </div>
 
@@ -232,7 +232,7 @@
             We leverage flow matching with consistency training to enable high-quality dexterous action generation in just 1-2 inference steps. 
             To handle diverse input modalities efficiently, we propose DiT-X, a diffusion transformer architecture with adaptive cross-attention and AdaLN-Zero conditioning that enables fine-grained feature interactions between action tokens and multi-modal observations. 
             ManiFlow demonstrates consistent improvements across diverse simulation benchmarks and nearly doubles success rates on real-world tasks across single-arm, bimanual, and humanoid robot setups with increasing dexterity. 
-            The extensive evaluation further demonstrates the strong robustness and generalizability of \ours to novel objects and background changes, and highlights its strong scaling capability with larger-scale datasets. 
+            The extensive evaluation further demonstrates the strong robustness and generalizability of ManiFlow to novel objects and background changes, and highlights its strong scaling capability with larger-scale datasets. 
             
         </p>
         <br>
@@ -664,8 +664,10 @@
 
     <h2>ManiFlow vs. π<sub>0</sub></h2>
     <p>
-    We evaluated several new objects. While Diffusion Policy, due to the use of Color Jitter augmentation, can occasionally handle some unseen objects, it does so with a very low success rate.
-    In contrast, iDP3 naturally handles a wide range of objects, thanks to its use of 3D representations.
+    We evaluate ManiFlow and π<sub>0</sub> with multiple bimanual dexterous tasks on RoboTwin 2.0 benchmark with challenging domain randomizations, including cluttered scenes with random distractors, novel
+    objects, diverse background textures, various lighting conditions, and table height changes, after training with 50 domain randomized demonstrations per task. 
+    Compared to the large-scale pre-trained π<sub>0</sub> model, ManiFlow shows superior learning efficiency and generalization capability, while only learning from scratch with pointcloud input.
+    ManiFlow demonstrates strong robustness across all randomization conditions, maintaining high success rates even when multiple domain shifts occur simultaneously.
     </p>
     <div id="video_grid_gen" style="padding-top: 1vw; padding-bottom: 2vw">
         <div class="row_label">π<sub>0</sub></div>
