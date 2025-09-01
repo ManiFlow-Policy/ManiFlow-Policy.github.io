@@ -611,19 +611,22 @@
 
     <h1 id="robustness">Policy Robustness</h1>
     <p>
-        ManiFlow demonstrates robustness to viewpoint changes, as shown in the following examples.
+        ManiFlow demonstrates robustness across diverse dexterous manipulation tasks. 
+        The policy performs long-horizon three-layer cup stacking with consistent precision, 
+        exhibits resilience when human intervenes by adding new distractors and rearranging existing objects during task execution, 
+        and sorts objects in a long sequence by shape properties regardless of color or initial positioning.
     </p>
 
 
     <div id="video_grid_view" style="padding-top: 1vw; padding-bottom: 2vw">
     <!-- 第三个视频组 -->
     <div class="video_wrapper videostyle_with_border">
-        <div class="column_label_view" style="margin-bottom: 10px;">Three-layer Cup Stacking</div>
+        <div class="column_label_view" style="margin-bottom: 10px;">Precision Stacking</div>
         <div class="video_container videostyle_with_border">
             <video autoplay muted playsinline loop>
                 <source src="videos/teaser/bunny_stack_1_4x.mp4" type="video/mp4">
             </video>
-            <div class="overlay">DP cannot grasp under large view changes.</div>
+            <div class="overlay">Long-horzon stacking with precision.</div>
         </div>
     </div>
     
@@ -634,7 +637,7 @@
             <video autoplay muted playsinline loop>
                 <source src="videos/teaser/bunny_grasp_continuous_4x.mp4" type="video/mp4">
             </video>
-            <div class="overlay">iDP3 is robust to large view changes.</div>
+            <div class="overlay">Grasp novel toys with human intervention.</div>
         </div>
     </div>
     </div>
@@ -647,7 +650,7 @@
             <video autoplay muted playsinline loop>
                 <source src="videos/teaser/bunny_sort_1_4x.mp4" type="video/mp4">
             </video>
-            <div class="overlay">DP cannot grasp under large view changes.</div>
+            <div class="overlay">Sort different shapes in a sequence.</div>
         </div>
     </div>
     
@@ -657,7 +660,7 @@
             <video autoplay muted playsinline loop>
                 <source src="videos/teaser/bunny_sort_2_4x.mp4" type="video/mp4">
             </video>
-            <div class="overlay">iDP3 is robust to large view changes.</div>
+            <div class="overlay">Sort shapes in any order.</div>
         </div>
     </div>
     </div>
