@@ -202,6 +202,27 @@ body, html {
     text-align: left;
 }
 
+column_label {
+    width: 50%; /* 调整为50%以匹配没有行标签的布局 */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Source Serif 4", serif;
+    text-align: center;
+}
+
+.column_label_view {
+    width: 100%; /* 改为100%，占满父容器宽度 */
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 确保文字居中 */
+    font-family: "Source Serif 4", serif;
+    text-align: center;
+}
 
 #video_grid_gen {
     display: flex;
@@ -272,11 +293,13 @@ body, html {
 #video_grid_view {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* 添加居中对齐 */
     width: 80%; /* 设置容器宽度为页面的80% */
     margin: 0 auto; /* 居中对齐 */
+    gap: 30px;
 }
 #video_grid_view > .video_wrapper {
-    width:35%;
+    width:40%;
     opacity: 1.0;
 }
 
