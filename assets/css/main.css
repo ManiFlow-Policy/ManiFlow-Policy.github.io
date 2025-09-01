@@ -1636,7 +1636,7 @@ a:hover {
     margin-bottom: 1vw;
     font-weight: bold;
     /* 使用padding来模拟视频区域的对齐 */
-    padding-left: calc(11% + 8px); /* row_label宽度 + gap */
+    padding-left: calc(11% - 18px); /* row_label宽度 + gap */
     padding-right: 0;
     box-sizing: border-box;
 }
