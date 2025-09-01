@@ -208,6 +208,7 @@ body, html {
     flex-wrap: wrap;
     width: 80%; /* 设置容器宽度为页面的80% */
     margin: 0 auto; /* 居中对齐 */
+    gap: 10px; /* 统一间距 */
 }
 
 #video_grid_gen > .video_wrapper {
