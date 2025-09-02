@@ -287,7 +287,9 @@
 
     <h1 id="consistency-training">Consistency Flow Training</h1>
     <p>
-        ManiFlow employs consistency training to improve the robustness and generalization of the learned policies. Below we demonstrate how consistency training helps the policy maintain stable performance across different scenarios.
+        Given a flow path that smoothly transforms action to noise, we sample multiple intermediate points via linear interpolation. 
+        During training, we learn to map any intermediate point on the flow trajectory back to its origin and ensure the self-consistency of sampled points on the same trajectory.
+        With consistency flow training, ManiFlow can generate high-quality action sequences in just 1-2 inference steps, significantly improving efficiency and robustness compared to traditional diffusion or flow matching models that require 10-100 steps.
     </p>
 
     <div class="allegrofail">
