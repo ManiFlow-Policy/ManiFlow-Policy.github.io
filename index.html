@@ -237,11 +237,11 @@
         <!-- <div class="publication-video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/6H2MkMetmFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
           </div> -->
-            <!-- <div class="video_container">
+            <div class="video_container">
                 <video loop autoplay muted playsinline preload="metadata">
-                    <source src="videos/short_teaser.mp4" type="video/mp4">
+                    <source src="videos/teaser_video.mp4" type="video/mp4">
                 </video>
-            </div> -->
+            </div>
     </div>
 </div>
 
@@ -274,13 +274,13 @@
         ManiFlow processes 2D or 3D visual observations, robot state, or language as inputs and outputs a sequence of actions. 
         We leverage a DiT-X transformer architecture to efficiently optimize a flow matching model with a continuous-time consistency training objective, ensuring high-quality action generation for challenging dexterous tasks.
     </p>
-    <div class="allegrofail">
+    <!-- <div class="allegrofail">
         <div class="video_container">
             <video loop autoplay muted playsinline preload="metadata">
                 <source src="videos/overview.mp4" type="video/mp4">
             </video>
         </div>
-    </div>
+    </div> -->
 
 
     <hr class="rounded">
@@ -925,25 +925,32 @@
     <h1 id="limitations">Limitations </h1>
 
     <p>
-        (1) Teleoperation with Apple Vision Pro is easy to set up, but it is tiring for human teleoperators, making imitation data hard to scale up within the research lab. 
+        We observe that ManiFlow fails in tasks that require detailed contact information and precise force
+        feedback, such as delicate assembly operations or compliant insertion tasks. This limitation stems
+        from ManiFlow’s design focus on kinematic control rather than force-based interactions, lacking
+        the tactile sensing and force control capabilities necessary for tasks where contact dynamics are
+        critical for success. However, we believe incorporating tactile feedback as an additional modality
+        would significantly enhance ManiFlow’s capability to handle more contact-rich manipulation tasks
+        and broaden its applicability
+        <!-- (1) Teleoperation with Apple Vision Pro is easy to set up, but it is tiring for human teleoperators, making imitation data hard to scale up within the research lab. 
         <br>(2) The depth sensor still produces noisy and inaccurate point clouds, limiting the performance of ManiFlow. 
         <br>(3) Collecting fine-grained manipulation skills, such as turning a screw, is time-consuming due to teleoperation with AVP; systems like Aloha are easier to collect dexterous manipulation tasks at this stage.
         <br>(4) We avoided using the robot's lower body, as maintaining balance is still challenging due to the hardware constraints brought by current humanoid robots.
-        <br>In general, scaling up high-quality manipulation data is the main bottleneck. In the future, we hope to explore how to scale up the training of 3D visuomotor policies with more high-quality data and how to employ our 3D visuomotor policy learning pipeline to humanoid robots with whole-body control.
+        <br>In general, scaling up high-quality manipulation data is the main bottleneck. In the future, we hope to explore how to scale up the training of 3D visuomotor policies with more high-quality data and how to employ our 3D visuomotor policy learning pipeline to humanoid robots with whole-body control. -->
     </p>
 
     <h1 id="hardware">Hardware </h1>
 
     <p>
-        Cross-platform Generalizability
-        Here are the hardware components used in this work:
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </p>
+       ManiFlow has been successfully deployed across three distinct real-world robot platforms, demonstrating superior performance in challenging manipulation tasks with increasing dexterity requirements.
+       <br>
+       • <strong>Humanoid Robot (Unitree H1)</strong> - Full-sized humanoid with 28-DoF including 7-DoF arms, 6-DoF anthropomorphic Inspire hands, and 2-DoF active head for coordinated head-arm movements. Features gimbal-mounted ZED stereo camera for active egocentric sensing and Apple Vision Pro teleoperation via <a href="https://github.com/OpenTeleVision/TeleVision" target="_blank">OpenTeleVision</a>.
+       <br>
+       • <strong>Bimanual System (Dual xArm7)</strong> - Two UFACTORY xArm 7 robotic arms equipped with PSYONIC Ability Hands (26-DoF total) for precise bimanual coordination and dexterous manipulation. Uses Intel RealSense LiDAR L515 camera with front-facing static view and Apple Vision Pro teleoperation through <a href="https://github.com/Dingry/BunnyVisionPro" target="_blank">Bunny-VisionPro</a>.
+       <br>
+       • <strong>Single-Arm Setup (Franka Panda)</strong> - Industrial-grade 7-DoF Franka Emika Panda robot with Robotiq parallel gripper for high precision tasks. Equipped with statically mounted Intel RealSense D455 RGB-D camera and Oculus VR for data collection teleoperation.
+       <br>
+</p>
 
 
 
